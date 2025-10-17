@@ -1,0 +1,5 @@
+{
+  "name": "Copy of AI Code Generator",
+  "description": "An intelligent application that solves complex coding questions by providing optimal code solutions, simplified explanations, and performance analysis using the Gemini API.",
+  "requestFramePermissions": []
+}
