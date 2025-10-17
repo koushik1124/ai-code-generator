@@ -1,65 +1,86 @@
-AI Code Generator (Frontend) – Powered by Google AI Studio
-This is a React + TypeScript app that enables users to ask coding questions and get AI-powered, beginner-friendly code solutions with explanations—powered directly by Google AI Studio’s Gemini API.
+🧠 AI Code Generator (Frontend) – Powered by Google AI Studio
 
-Features
-Submit coding questions – Python-focused by default.
+An interactive React + TypeScript web application that allows users to ask coding questions and receive AI-generated, beginner-friendly code solutions with step-by-step explanations. The app leverages Google AI Studio’s Gemini API to provide accurate, educational, and context-aware coding assistance.
 
-Uses Google AI Studio (Gemini API) for instant answers, optimal code, and clear explanations.
+🚀 Features
 
-Simple, modern UI for coding help.
+💬 Ask Coding Questions – Supports Python by default (can be extended to other languages).
 
-Easy deployment via Vite (see vite.config.ts).
+⚡ AI-Powered Answers – Uses Google AI Studio (Gemini API) to generate optimal solutions with clear explanations.
 
-Tech Stack
+🎨 Modern UI – Clean and responsive interface for smooth user interaction.
+
+🔧 Easy Deployment – Built with Vite for fast builds and simple configuration.
+
+🛠 Tech Stack
+
 Frontend: React.js, TypeScript, Vite
 
-AI: Google AI Studio (Gemini API), integrated via API calls from React
+AI Integration: Google AI Studio (Gemini API) via REST API calls
 
-Getting Started
-Clone the repo & install dependencies:
+Environment Management: .env.local for API configuration
 
-bash
+⚙️ Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/ai-code-generator.git
+cd ai-code-generator
+
+2️⃣ Install Dependencies
 npm install
-Configure .env.local:
 
-Set your Google AI Studio API endpoint or proxy (if using backend middleware).
+3️⃣ Configure Environment Variables
 
-Run the app:
+Create a .env.local file in the root directory and add your Google AI Studio API endpoint or proxy:
 
-bash
+VITE_GEMINI_API_KEY=your_api_key_here
+
+4️⃣ Run the App
 npm run dev
-Ask any coding question in the app!
 
-How it Works
-All question requests are sent from the frontend to Google AI Studio using secure API calls.
 
-Responses include a simplified problem statement, well-commented code, and a clear explanation.
+Then open your browser at http://localhost:5173/
+ and start exploring!
 
-Key Files
-/components: UI building blocks
+🧩 Project Structure
+src/
+ ├── components/       # UI components and layout
+ ├── services/         # API utility functions (Gemini API integration)
+ ├── App.tsx           # Main app logic and routing
+ ├── vite.config.ts    # Build configuration
+ └── .env.local        # API keys and environment variables
 
-/services: API utilities (handles requests to Gemini API)
+💡 How It Works
 
-App.tsx: App logic and routing
+Users submit coding-related questions through the UI.
 
-.env.local: API secrets/config
+The app securely sends the prompt to Google AI Studio (Gemini API).
 
-vite.config.ts: Build and deployment config
+Gemini returns:
 
-Example Usage
+A simplified explanation of the task.
+
+Well-documented Python code.
+
+A step-by-step reasoning summary.
+
+🧠 Example Query
+
 Q: “Write a function to check if a string is a palindrome.”
 
-AI Studio’s Gemini returns:
+Response from Gemini:
 
-Simplified explanation of the task.
+Task explanation in plain language.
 
-Python code with comments.
+Clean, commented Python code.
 
-Stepwise solution overview.
+Logical breakdown of each step.
 
-Customize & Extend
-Update the AI Studio prompt for different coding languages or deeper explanations.
+🧩 Customization Ideas
 
-Style the app for your workflow.
+Add multi-language support (e.g., JavaScript, C++, Java).
 
-Add authentication or user history features as needed.
+Integrate user authentication for personalized sessions.
+
+Implement prompt history and AI response saving.
+
+Enhance styling and add syntax highlighting for better readability.
